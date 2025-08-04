@@ -24,20 +24,20 @@ export default function HomePage() {
   }, [searchQuery]);
 
   return (
-    <div className="space-y-8 animate-in fade-in-50 duration-500">
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground">Welcome to ChronoBlog</h1>
-        <p className="text-muted-foreground text-lg">Exploring ideas, one post at a time.</p>
+    <div className="space-y-12 animate-in fade-in-50 duration-500">
+      <div className="text-center space-y-4 pt-8">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter font-headline text-foreground">Welcome to ChronoBlog</h1>
+        <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">Exploring ideas, one post at a time. A modern, clean, and content-focused blog theme.</p>
       </div>
       
       <div className="max-w-xl mx-auto">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
           <Input
             type="search"
             aria-label="Search articles"
             placeholder="Search articles by keyword or tag..."
-            className="pl-10 w-full"
+            className="pl-12 w-full h-12 rounded-full text-base"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

@@ -15,15 +15,15 @@ export function ArticleCard({ article }: ArticleCardProps) {
 
   return (
     <Link href={`/${article.slug}`} className="group block" aria-label={`Read more about ${article.title}`}>
-      <Card className="h-full flex flex-col transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 overflow-hidden">
+      <Card className="h-full flex flex-col transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-2 overflow-hidden bg-card/50">
         <CardHeader className="p-0">
-          <div className="relative aspect-video w-full">
+          <div className="relative aspect-video w-full overflow-hidden">
             <Image
               src={article.imageUrl}
               alt={article.title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
               data-ai-hint={article.imageHint}
             />
           </div>
@@ -42,7 +42,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
               <Badge key={tag} variant="secondary" className="font-normal">{tag}</Badge>
             ))}
           </div>
-          <div className="flex items-center gap-4 text-xs text-muted-foreground w-full pt-2 border-t">
+          <div className="flex items-center gap-4 text-xs text-muted-foreground w-full pt-4 mt-4 border-t">
             <div className="flex items-center gap-1.5">
               <User className="h-3 w-3" />
               <span>{article.author}</span>

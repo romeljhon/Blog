@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Loader2, Wand2 } from 'lucide-react';
+import { Loader2, Wand2, Sparkles } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Badge } from '@/components/ui/badge';
 
@@ -68,9 +68,9 @@ export default function EditorPage() {
   return (
     <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto animate-in fade-in-50 duration-500">
       <div className="lg:col-span-1">
-        <Card>
+        <Card className="bg-card/50">
             <CardHeader>
-              <CardTitle className="font-headline text-2xl">Content Editor</CardTitle>
+              <CardTitle className="font-headline text-2xl flex items-center gap-2"><Sparkles /> AI Content Editor</CardTitle>
               <CardDescription>Write your article and get AI-powered suggestions to improve it.</CardDescription>
             </CardHeader>
             <CardContent>

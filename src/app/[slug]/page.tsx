@@ -37,10 +37,10 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   }
 
   return (
-    <article className="max-w-4xl mx-auto py-8 animate-in fade-in-50 duration-500">
-      <header className="mb-8 text-center">
-        <h1 className="font-headline text-4xl md:text-6xl font-bold mb-4 text-foreground">{article.title}</h1>
-        <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+    <article className="max-w-3xl mx-auto py-8 animate-in fade-in-50 duration-500">
+      <header className="mb-8">
+        <h1 className="font-headline text-4xl md:text-5xl font-extrabold mb-4 text-foreground tracking-tight">{article.title}</h1>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <User className="h-4 w-4" />
             <span>{article.author}</span>
@@ -52,7 +52,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
         </div>
       </header>
 
-      <div className="relative w-full aspect-[16/9] mb-8 rounded-lg overflow-hidden shadow-lg">
+      <div className="relative w-full aspect-[16/9] mb-8 rounded-lg overflow-hidden shadow-xl">
         <Image
           src={article.imageUrl}
           alt={article.title}
@@ -60,11 +60,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           className="object-cover"
           data-ai-hint={article.imageHint}
           priority
-          sizes="(max-width: 1024px) 100vw, 896px"
+          sizes="(max-width: 768px) 100vw, 768px"
         />
       </div>
 
-      <div className="font-body text-lg leading-relaxed space-y-6 text-foreground/90">
+      <div className="prose dark:prose-invert prose-lg max-w-none text-foreground/90 space-y-6">
         {article.content.split('\n\n').map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
@@ -73,11 +73,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
       <footer className="mt-12 pt-8 border-t">
         <div className="flex items-center gap-2 mb-4">
           <Tag className="h-5 w-5 text-muted-foreground" />
-          <h3 className="text-lg font-headline font-semibold">Tags</h3>
+          <h3 className="text-lg font-semibold">Tags</h3>
         </div>
         <div className="flex flex-wrap gap-2">
           {article.tags.map(tag => (
-            <Badge key={tag} variant="outline" className="text-sm px-3 py-1">{tag}</Badge>
+            <Badge key={tag} variant="secondary" className="text-sm px-3 py-1">{tag}</Badge>
           ))}
         </div>
       </footer>

@@ -1,3 +1,61 @@
-export default function Home() {
-  return <></>;
+"use client";
+
+import { useState, useMemo } from 'react';
+import { getArticles } from '@/lib/articles';
+import { ArticleCard } from '@/components/article-card';
+import { Input } from '@/components/ui/input';
+import { Search } from 'lucide-react';
+
+const allArticles = getArticles();
+
+export default function HomePage() {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredArticles = useMemo(() => {
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    if (!lowerCaseQuery) {
+      return allArticles;
+    }
+    return allArticles.filter(article =>
+      article.title.toLowerCase().includes(lowerCaseQuery) ||
+      article.content.toLowerCase().includes(lowerCaseQuery) ||
+      article.tags.some(tag => tag.toLowerCase().includes(lowerCaseQuery))
+    );
+  }, [searchQuery]);
+
+  return (
+    <div className="space-y-8 animate-in fade-in-50 duration-500">
+      <div className="text-center space-y-2">
+        <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground">Welcome to ChronoBlog</h1>
+        <p className="text-muted-foreground text-lg">Exploring ideas, one post at a time.</p>
+      </div>
+      
+      <div className="max-w-xl mx-auto">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <Input
+            type="search"
+            aria-label="Search articles"
+            placeholder="Search articles by keyword or tag..."
+            className="pl-10 w-full"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+      </div>
+
+      {filteredArticles.length > 0 ? (
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {filteredArticles.map(article => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-16">
+          <p className="text-muted-foreground text-xl">No articles found.</p>
+          <p className="text-muted-foreground">Try a different search query or clear the search.</p>
+        </div>
+      )}
+    </div>
+  );
 }

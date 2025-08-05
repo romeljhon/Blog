@@ -52,17 +52,19 @@ export default function ArticlePage({ params }: ArticlePageProps) {
         </div>
       </header>
 
-      <div className="relative w-full aspect-[16/9] mb-8 rounded-lg overflow-hidden shadow-xl">
-        <Image
-          src={article.imageUrl}
-          alt={article.title}
-          fill
-          className="object-cover"
-          data-ai-hint={article.imageHint}
-          priority
-          sizes="(max-width: 768px) 100vw, 768px"
-        />
-      </div>
+      {article.imageUrl && (
+        <div className="relative w-full aspect-[16/9] mb-8 rounded-lg overflow-hidden shadow-xl">
+          <Image
+            src={article.imageUrl}
+            alt={article.title}
+            fill
+            className="object-cover"
+            data-ai-hint={article.imageHint}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+      )}
 
       <div className="prose dark:prose-invert prose-lg max-w-none text-foreground/90 space-y-6">
         {article.content.split('\n\n').map((paragraph, index) => (

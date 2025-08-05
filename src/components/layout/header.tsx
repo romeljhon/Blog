@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BookOpen, Sparkles } from 'lucide-react';
+import { ThemeSwitcher } from '@/components/theme-switcher';
 
 export function Header() {
   return (
@@ -10,17 +11,20 @@ export function Header() {
           <BookOpen className="h-6 w-6 text-primary transition-transform group-hover:rotate-[-5deg]" />
           <h1 className="text-2xl font-bold text-foreground tracking-tight">ChronoBlog</h1>
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-4">
-          <Button variant="ghost" asChild>
-            <Link href="/">Home</Link>
-          </Button>
-          <Button variant="default" asChild>
-            <Link href="/editor">
-              <Sparkles className='mr-2 h-4 w-4' />
-              AI Editor
-            </Link>
-          </Button>
-        </nav>
+        <div className="flex items-center gap-2">
+            <nav className="flex items-center gap-1 sm:gap-2">
+              <Button variant="ghost" asChild>
+                <Link href="/">Home</Link>
+              </Button>
+              <Button variant="ghost" asChild>
+                <Link href="/editor">
+                  <Sparkles className='mr-2 h-4 w-4' />
+                  AI Editor
+                </Link>
+              </Button>
+            </nav>
+            <ThemeSwitcher />
+        </div>
       </div>
     </header>
   );

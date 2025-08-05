@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getArticleBySlug, getArticles } from '@/lib/articles';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, Tag } from 'lucide-react';
-import { format } from 'date-fns';
+import { FormattedDate } from '@/components/formatted-date';
 
 type ArticlePageProps = {
   params: {
@@ -47,7 +47,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           </div>
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4" />
-            <time dateTime={article.date}>{format(new Date(article.date), 'PPP')}</time>
+            <FormattedDate dateString={article.date} formatString="PPP" />
           </div>
         </div>
       </header>

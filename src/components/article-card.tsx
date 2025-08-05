@@ -4,7 +4,7 @@ import type { Article } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User } from 'lucide-react';
-import { format } from 'date-fns';
+import { FormattedDate } from './formatted-date';
 
 type ArticleCardProps = {
   article: Article;
@@ -49,7 +49,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
             </div>
             <div className="flex items-center gap-1.5">
               <Calendar className="h-3 w-3" />
-              <time dateTime={article.date}>{format(new Date(article.date), 'MMM d, yyyy')}</time>
+              <FormattedDate dateString={article.date} formatString="MMM d, yyyy" />
             </div>
           </div>
         </CardFooter>

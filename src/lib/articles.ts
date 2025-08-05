@@ -46,6 +46,36 @@ Your sourdough starter is the heart of your bread. It's a living entity that nee
 
 The baking process itself involves several stages: mixing, bulk fermentation, shaping, and the final proof. Each step plays a critical role in developing the dough's structure and flavor. Temperature is a crucial variable; a warmer environment will speed up fermentation, while a cooler one will slow it down, allowing for more complex flavors to develop. Don't be discouraged by your first few loaves. Like any art form, sourdough baking takes practice. But the moment you pull that first perfect, golden-brown, crackling loaf from your oven, you'll know it was all worth it.`,
   },
+  {
+    id: '4',
+    slug: 'the-psychology-of-color-in-branding',
+    title: 'The Psychology of Color in Branding',
+    author: 'Alex Johnson',
+    date: '2024-04-22T11:00:00Z',
+    tags: ['Branding', 'Marketing', 'Psychology', 'Design'],
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'colorful abstract art',
+    content: `Color is a powerful tool in branding. It can evoke emotions, convey messages, and create a lasting impression on your audience. Understanding the psychology of color can help you build a stronger, more effective brand identity.
+
+Red, for example, is often associated with energy, passion, and excitement. It's a color that grabs attention and can create a sense of urgency. Think of brands like Coca-Cola and Netflix. Blue, on the other hand, is often associated with trust, stability, and calmness. It's a popular choice for financial institutions and tech companies, like Facebook and IBM.
+
+When choosing a color palette for your brand, it's important to consider your target audience, your industry, and the message you want to convey. A well-chosen color palette can help you stand out from the competition and create a brand that resonates with your customers.`,
+  },
+  {
+    id: '5',
+    slug: 'a-beginners-guide-to-urban-gardening',
+    title: 'A Beginner\'s Guide to Urban Gardening',
+    author: 'Samantha Green',
+    date: '2024-03-10T16:45:00Z',
+    tags: ['Gardening', 'Urban Living', 'DIY', 'Sustainability'],
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'potted plants city',
+    content: `Living in a city doesn't mean you can't have a green thumb. Urban gardening is a great way to bring nature into your home, grow your own food, and reduce your carbon footprint. Whether you have a spacious balcony or just a sunny windowsill, you can create a thriving garden in the heart of the city.
+
+Start small with a few herbs like basil, mint, and parsley. They're easy to grow and will add fresh flavor to your meals. If you have more space, you can try growing vegetables like tomatoes, peppers, and lettuce in containers. Be sure to choose a spot that gets at least six hours of sunlight per day.
+
+Urban gardening is not just about growing plants; it's about connecting with nature and your community. Join a local gardening group, share your produce with your neighbors, and enjoy the satisfaction of growing your own food.`,
+  },
 ];
 
 // Sort articles by date in descending order (newest first)

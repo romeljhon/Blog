@@ -8,7 +8,7 @@ const articles: Article[] = [
     author: 'Jane Doe',
     date: '2024-07-15T10:00:00Z',
     tags: ['Web Development', 'Technology', 'Future', 'AI'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=600&h=400&fit=crop',
     imageHint: 'abstract technology',
     content: `The web development landscape is in a constant state of flux, and 2024 is no exception. As we move further into the decade, several key trends are emerging that will shape how we build and interact with websites and applications. From the rise of AI-powered development tools to the continued importance of server-side rendering, staying ahead of the curve is crucial for any developer.
 
@@ -23,7 +23,7 @@ Another area to watch is the evolution of JavaScript frameworks. While React, Vu
     author: 'John Smith',
     date: '2024-06-28T14:30:00Z',
     tags: ['Travel', 'Adventure', 'Hiking', 'South America'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1519045769291-b65e9f1e1883?q=80&w=600&h=400&fit=crop',
     imageHint: 'mountain landscape',
     content: `The Andes mountain range, stretching along the western coast of South America, is a dream destination for hikers and adventurers. Its towering peaks, ancient ruins, and vibrant cultures offer an unparalleled travel experience. My recent journey took me from the colorful markets of Peru to the stark, beautiful landscapes of Patagonia in Chile, and every step was a revelation.
 
@@ -38,7 +38,7 @@ Further south, Patagonia's Torres del Paine National Park presents a more rugged
     author: 'Emily White',
     date: '2024-05-19T09:00:00Z',
     tags: ['Food', 'Baking', 'DIY', 'Sourdough'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1584921443657-3e1f5b451528?q=80&w=600&h=400&fit=crop',
     imageHint: 'artisan bread',
     content: `Baking sourdough bread is more than just a culinary task; it's a rewarding journey of patience, science, and intuition. The process, which relies on a living culture of wild yeast and bacteria—the sourdough starter—can seem intimidating at first, but mastering it is achievable for any home baker. The key is understanding the fundamentals and embracing the slow, meditative rhythm of the craft.
 
@@ -53,7 +53,7 @@ The baking process itself involves several stages: mixing, bulk fermentation, sh
     author: 'Alex Johnson',
     date: '2024-04-22T11:00:00Z',
     tags: ['Branding', 'Marketing', 'Psychology', 'Design'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1534531688121-12581cde8743?q=80&w=600&h=400&fit=crop',
     imageHint: 'colorful abstract art',
     content: `Color is a powerful tool in branding. It can evoke emotions, convey messages, and create a lasting impression on your audience. Understanding the psychology of color can help you build a stronger, more effective brand identity.
 
@@ -68,13 +68,43 @@ When choosing a color palette for your brand, it's important to consider your ta
     author: 'Samantha Green',
     date: '2024-03-10T16:45:00Z',
     tags: ['Gardening', 'Urban Living', 'DIY', 'Sustainability'],
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1459156212016-c812468e2115?q=80&w=600&h=400&fit=crop',
     imageHint: 'potted plants city',
     content: `Living in a city doesn't mean you can't have a green thumb. Urban gardening is a great way to bring nature into your home, grow your own food, and reduce your carbon footprint. Whether you have a spacious balcony or just a sunny windowsill, you can create a thriving garden in the heart of the city.
 
 Start small with a few herbs like basil, mint, and parsley. They're easy to grow and will add fresh flavor to your meals. If you have more space, you can try growing vegetables like tomatoes, peppers, and lettuce in containers. Be sure to choose a spot that gets at least six hours of sunlight per day.
 
 Urban gardening is not just about growing plants; it's about connecting with nature and your community. Join a local gardening group, share your produce with your neighbors, and enjoy the satisfaction of growing your own food.`,
+  },
+  {
+    id: '6',
+    slug: 'mindfulness-in-the-digital-age',
+    title: 'Mindfulness in the Digital Age: Finding Calm in the Chaos',
+    author: 'Dr. Evelyn Reed',
+    date: '2024-07-20T09:00:00Z',
+    tags: ['Mindfulness', 'Wellness', 'Technology', 'Mental Health'],
+    imageUrl: 'https://images.unsplash.com/photo-1591348122448-a76428198b81?q=80&w=600&h=400&fit=crop',
+    imageHint: 'calm meditation',
+    content: `In our hyper-connected world, finding moments of peace can feel like a monumental task. The constant barrage of notifications, emails, and social media updates keeps our minds in a perpetual state of busyness. This is where mindfulness comes in—a practice of being present and fully aware of the current moment.
+
+Practicing mindfulness doesn't require a silent retreat or hours of meditation. It can be as simple as taking a few deep breaths before checking your phone in the morning, or paying full attention to the taste and texture of your food during a meal. The goal is to break the cycle of automatic, distracted behavior and cultivate a sense of intentionality.
+
+Digital tools can paradoxically help in this endeavor. Apps like Calm and Headspace offer guided meditations and mindfulness exercises tailored to modern life. Setting "digital sundowns" by putting away screens an hour before bed can also significantly improve sleep quality and reduce anxiety. By integrating small, mindful habits into our daily routine, we can reclaim our attention and find calm amidst the digital chaos.`,
+  },
+  {
+    id: '7',
+    slug: 'the-rise-of-sustainable-fashion',
+    title: 'The Rise of Sustainable Fashion: A Guide to Conscious Consumerism',
+    author: 'Leo Maxwell',
+    date: '2024-07-18T11:30:00Z',
+    tags: ['Fashion', 'Sustainability', 'Eco-friendly', 'Lifestyle'],
+    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&h=400&fit=crop',
+    imageHint: 'sustainable clothing',
+    content: `The fashion industry is undergoing a significant transformation. For years, the "fast fashion" model has dominated, prioritizing cheap, trendy clothing at the cost of environmental and ethical standards. However, a growing movement towards sustainable fashion is challenging this paradigm, encouraging consumers to think differently about what they wear.
+
+Sustainable fashion encompasses a range of practices, from using eco-friendly materials like organic cotton and Tencel to ensuring fair wages and safe working conditions for garment workers. It also involves a shift in mindset—moving away from disposable trends and towards a wardrobe built on quality, timeless pieces. Thrifting, clothing swaps, and supporting brands that offer repair services are all part of this conscious consumerism.
+
+As a consumer, you have the power to drive change. Before making a purchase, ask questions: Who made this garment? What is it made of? Will I wear it for years to come? By making informed choices, we can collectively support a fashion industry that is not only stylish but also kind to people and the planet. The future of fashion is one where style and sustainability go hand-in-hand.`,
   },
 ];
 
